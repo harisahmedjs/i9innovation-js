@@ -1,7 +1,5 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import Vector from '../assets/Vector.png'
-import Shape from '../assets/ShapeGroup.png'
 import Backimage from '../assets/Background.jpg'
 import img1 from '../assets/1.png'
 import img2 from '../assets/2.png'
@@ -13,12 +11,14 @@ import img7 from '../assets/7.png'
 import img8 from '../assets/8.png'
 import Form from '../components/Form'
 import Footer from '../components/Footer'
+import PageHero from '../components/PageHero'
 
 const Blogs = () => {
 
   const data = [
     {
       img: img1,
+      p: 'Health Care',
       heading: 'Online Pharmacy App',
       para: 'Setting new standards for efficiency experience in the pharmaceutical industry....',
       para1: 'March',
@@ -27,6 +27,7 @@ const Blogs = () => {
     },
     {
       img: img2,
+      p: 'Business',
       heading: 'E-commerce',
       para: 'Setting new standards for efficiency experience in the pharmaceutical industry....',
       para1: 'March',
@@ -35,6 +36,7 @@ const Blogs = () => {
     },
     {
       img: img3,
+      p: 'Education',
       heading: 'E-Library',
       para: 'Setting new standards for efficiency experience in the pharmaceutical industry....',
       para1: 'March',
@@ -43,6 +45,7 @@ const Blogs = () => {
     },
     {
       img: img4,
+      p: 'Analytics',
       heading: 'Naviagtion-NABH',
       para: 'Setting new standards for efficiency experience in the pharmaceutical industry....',
       para2: '28,2024',
@@ -51,6 +54,7 @@ const Blogs = () => {
     },
     {
       img: img5,
+      p: 'Health Care',
       heading: '7-Strategies-Improve-hospital',
       para: 'Setting new standards for efficiency experience in the pharmaceutical industry....',
       para2: '28,2024',
@@ -59,6 +63,7 @@ const Blogs = () => {
     },
     {
       img: img6,
+      p: 'Health Care',
       heading: 'Comprehensive Information',
       para: 'Setting new standards for efficiency experience in the pharmaceutical industry....',
       para2: '28,2024',
@@ -67,6 +72,7 @@ const Blogs = () => {
     },
     {
       img: img7,
+      p: 'Analytics',
       heading: 'Diagnostic-Imaging-Ris-Pacs',
       para: 'Setting new standards for efficiency experience in the pharmaceutical industry....',
       para2: '28,2024',
@@ -75,6 +81,7 @@ const Blogs = () => {
     },
     {
       img: img8,
+      p: 'Health Care',
       heading: 'Future-Pathology',
       para: 'Setting new standards for efficiency experience in the pharmaceutical industry....',
       para2: '28,2024',
@@ -88,8 +95,8 @@ const Blogs = () => {
   return (
     <div >
       <Navbar />
-         {/* HeroSection  starts*/}
-      <div>
+      {/* HeroSection  starts*/}
+      {/* <div>
         <img className=' absolute mt-10' src={Vector} alt="" />
       </div>
       <div className='mt-20'>
@@ -98,46 +105,50 @@ const Blogs = () => {
       </div>
       <div className='mt-52'>
         <img src={Shape} alt="" />
-      </div>
-             {/* HeroSection ends */}
+      </div> */}
+      <PageHero title={'Blogs'} description={'Discover our useful resources and read articles on different categories'} />
 
-             {/* CardSection starts */}
+      {/* HeroSection ends */}
+
+      {/* CardSection starts */}
       <div >
         <div className='' >
-          <img className='mt-96 absolute' src={Backimage} alt="" />
+          <img className='mt-96 absolute  w-[120rem] h-[38rem]' src={Backimage} alt="" />
         </div>
-        <div className='flex flex-wrap gap-20 p-5 rounded-3xl ml-32 mt-52 '>
-          {data.map((item, index) => (
-            <div key={index} className='w-[22rem]  stroke-[#E9E9E9]  bg-[#FBFBFB] p-3 rounded-xl relative'>
-              <img src={item.img} alt={`Image ${index}`} />
-              <h1 className='font-bold text-black mt-2 mb-2'>{item.heading}</h1>
-              <p className='text-[#697586] '>{item.para}</p>
-              <div className='flex justify-between'> 
-                <p className='text-[#0065C0] font-semibold mt-2'>{item.para3}</p>
-              <p  className='text-[#697586] mt-2'>{item.para1}</p>
+        <div className="container mx-auto">
+          <div className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-20 p-5 rounded-3xl  mt-20 shadow-black'>
+            {data.map((item, index) => (
+              <div key={index} className='  bg-[#FBFBFB] p-2 rounded-2xl relative shadow-xl'>
+                <img className='w-full' src={item.img} alt={`Image ${index}`} />
+                <p className='bg-[#E5E5E5] mt-6 rounded-full w-28 px-1 text-center'>{item.p}</p>
+                <h1 className='font-bold text-black mt-2 mb-2 text-xl'>{item.heading}</h1>
+                <p className='text-[#697586]  text-sm'>{item.para}</p>
+                <div className='flex justify-between px-2'>
+                  <p className='text-[#0065C0] font-semibold mt-2'>{item.para3}</p>
+                  <p className='text-[#697586] mt-2'>{item.para1}</p>
+                </div>
+
+                <p className='text-[#697586] px-2'>{item.para2}</p>
               </div>
-             
-              <p  className='text-[#697586]'>{item.para2}</p>
-            </div>
-          ))}
+            ))}</div>
         </div>
       </div>
-          {/* CardSection ends  */}
+      {/* CardSection ends  */}
 
 
-          {/* FormSection starts */}
+      {/* FormSection starts */}
 
-        <Form />
-       
-          {/* FormSection ends */}
+      <Form />
 
-          {/* Footer section starts */}
+      {/* FormSection ends */}
 
-           <Footer />
+      {/* Footer section starts */}
 
-          {/* Footer section ends */}
+      <Footer />
 
-    </div>
+      {/* Footer section ends */}
+
+    </div >
 
 
   )
