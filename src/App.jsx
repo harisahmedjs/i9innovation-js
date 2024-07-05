@@ -1,19 +1,13 @@
 import React from 'react'
-import Blogs from './screens/Blogs'
-import { RouterProvider } from 'react-router-dom'
-import Router from './config/router/Router'
-
-
-
-
+import RouterConfig from './config/router/RouterConfig'
 
 
 const App = () => {
   return (
 
-    <>
-      <RouterProvider router={Router} />
-    </>
+    
+      <RouterConfig />
+    
 
   )
 }

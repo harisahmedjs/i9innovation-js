@@ -80,8 +80,8 @@ const Footer = () => {
 
 
         </div>
-        <div className='bg-[#006FAF] h-[3rem] '>
-          <p className='text-[#FAFAFA] text-sm text-center py-4'>
+        <div className='bg-[#006FAF] h-[2rem]'>
+          <p className='text-[#FAFAFA] text-sm text-center mt-2'>
             COPYRIGHT © 2015 - 2024 I9 INNOVATIONS & EDUCATIONS PVT, LTD. |PRIVACY POLICY| DISCLAIMER| ALL RIGHTS RESERVED
           </p>
         </div>

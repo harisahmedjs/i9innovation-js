@@ -94,7 +94,7 @@ const Blogs = () => {
 
   return (
     <div >
-      <Navbar />
+      {/* <Navbar /> */}
       {/* HeroSection  starts*/}
       {/* <div>
         <img className=' absolute mt-10' src={Vector} alt="" />
